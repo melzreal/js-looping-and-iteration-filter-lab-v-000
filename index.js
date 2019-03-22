@@ -14,7 +14,7 @@ function matchName(collection, name){
   const newCollection = [];
 
   for (const user of collection) {
-    if (name(user)) {
+    if (user.name === name) {
       newCollection.push(user);
     }
   }
