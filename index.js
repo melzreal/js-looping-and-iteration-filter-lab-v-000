@@ -10,6 +10,14 @@ function fuzzyMatch(collection, initials){
   return result;
 }
 
-function matchName(){
+function matchName(collection, name){
+  const newCollection = [];
 
+  for (const user of collection) {
+    if (name(user)) {
+      newCollection.push(user);
+    }
+  }
+
+  return newCollection;
 }
