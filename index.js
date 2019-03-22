@@ -5,8 +5,9 @@ function findMatching(collection, name){
   return result;
 }
 
-function fuzzyMatch(){
-
+function fuzzyMatch(collection, initials){
+  const result = collection.filter(n => n.startsWith(initials));
+  return result;
 }
 
 function matchName(){
